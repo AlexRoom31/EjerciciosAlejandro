@@ -9,10 +9,20 @@ public class Practica4 {
         int num1 = 0; // Creo las varaibles con un valor por defecto para evitar errores
         int num2 = 0;
 
-        System.out.println("Introduce el multiplicando (3 cifras): ");
+        System.out.println("Introduce el multiplicando (3 cifras): "); // Pide primer numero
         num1 = sc.nextInt(); // Sobreescribo las varaibles por teclado
-        System.out.println("Introduce el multiplicando (3 cifras): ");
+        while (num1 <= 99 || num1 > 999) // Verifica que el numero sea de 3 cifras y tambien si es negativo
+        {
+            System.out.println("Introduce el numero de nuevo tiene que ser de 3 cifras y positivo (3 cifras): ");
+            num1 = sc.nextInt();// Sobreescribe el numero
+        }
+        System.out.println("Introduce el multiplicando (3 cifras): "); // Pide segundo numero
         num2 = sc.nextInt();
+        while (num2 <= 99 || num2 > 999) // Verifica que el numero sea de 3 cifras y tambien si es negativo
+        {
+            System.out.println("Introduce el numero de nuevo tiene que ser de 3 cifras y positivo (3 cifras): ");
+            num2 = sc.nextInt();// Sobreescribe el numero
+        }
         int resultado = num1*num2; // la multiplicacion para saber el resultado final
         System.out.println("El producto de la multiplicaciones:  "+resultado); // Escribo el resultado final
         System.out.println("El proceso es: ");
