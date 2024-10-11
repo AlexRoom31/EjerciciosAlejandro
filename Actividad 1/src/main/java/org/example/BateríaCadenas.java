@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class BateríaCadenas {
@@ -30,9 +31,34 @@ public class BateríaCadenas {
 
     }
     public void Ejercicio3() {
-
+        Scanner sc = new Scanner(System.in);
+        int n = 0;
+        int m = 0;
+        String numeroStr = "0";
+        Boolean err = true;
+        while(err)
+        {
+            try {
+                System.out.println("Escribe el numero N: ");
+                n = sc.nextInt();
+                System.out.println("Escribe el numero M");
+                m = sc.nextInt();
+                numeroStr = Integer.toString(n);
+                if (numeroStr.length()>m)
+                    err = false;
+                else
+                    System.out.println("No se pueden quitar mas cifras de las que hay. ");
+            } catch (InputMismatchException e) {
+                System.out.println("ERROR. Introduce un numero");
+                sc.nextLine();
+            }
+        }
+        numeroStr = numeroStr.substring(0,numeroStr.length()-m);
+        System.out.println(numeroStr);
     }
     public void Ejercicio4() {
+        String texto = "Hola Mundo, bienvenido a Mundo. Mundo es genial.";
+        String subcadena = "Mundo";
 
     }
     public void Ejercicio5() {

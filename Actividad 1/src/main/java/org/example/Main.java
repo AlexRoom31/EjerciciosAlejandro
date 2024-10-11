@@ -16,8 +16,8 @@ public class Main {
 
         BateríaCadenas bateriaCadenas = new BateríaCadenas();
         //bateriaCadenas.Ejercicio1();
-        bateriaCadenas.Ejercicio2();
-        //bateriaCadenas.Ejercicio3();
+        //bateriaCadenas.Ejercicio2();
+        bateriaCadenas.Ejercicio3();
         //bateriaCadenas.Ejercicio4();
         //bateriaCadenas.Ejercicio5();
     }
