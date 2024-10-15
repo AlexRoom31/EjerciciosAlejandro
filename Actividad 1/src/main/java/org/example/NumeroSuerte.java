@@ -14,7 +14,7 @@ public class NumeroSuerte {
             try {
                 String fecha = sc.nextLine();
                 String[] partes = fecha.split("/");
-                if (partes.length == 3) { // Comprueba si la fecha se ha divido en 3 numeros: dia, mes y año
+                if (partes.length == 3) { // Comprueba si la fecha se ha divido en 3 numeros y que el formato sea divido con /
                     dia = Integer.parseInt(partes[0]);
                     mes = Integer.parseInt(partes[1]);
                     ano = Integer.parseInt(partes[2]);
@@ -29,7 +29,7 @@ public class NumeroSuerte {
                         }
                     }
                 }
-                if (err)
+                if (err) // Aunque no de error de try catch si no se cumplen todos los if mostrara error y volvera a pedir los datos porque algun datos no esta segun lo previsto
                 {
                     System.out.println("Fecha invalida escriba la fecha bien (dd/mm/yyyy): "); // Mensaje de error
                 }
@@ -50,7 +50,7 @@ public class NumeroSuerte {
         resultado3 = Integer.parseInt(resultadoSTR.substring(2,3));
         resultado4 = Integer.parseInt(resultadoSTR.substring(3,4));
 
-        numeroSuerte = resultado1+resultado2+resultado3+resultado4;
-        System.out.println(resultado1+" + "+resultado2+" + "+resultado3+" + "+resultado4+" = "+numeroSuerte);
+        numeroSuerte = resultado1+resultado2+resultado3+resultado4; // Suma de los digitos del resultado de la suma anterior
+        System.out.println(resultado1+" + "+resultado2+" + "+resultado3+" + "+resultado4+" = "+numeroSuerte); // Muestro la suma
     }
 }
