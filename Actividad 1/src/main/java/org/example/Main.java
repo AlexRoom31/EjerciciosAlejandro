@@ -14,11 +14,14 @@ public class Main {
         /*Practica4 practicas4 = new Practica4();
         practicas4.Practica4();*/
 
-        BateríaCadenas bateriaCadenas = new BateríaCadenas();
-        //bateriaCadenas.Ejercicio1();
-        //bateriaCadenas.Ejercicio2();
+        /*BateríaCadenas bateriaCadenas = new BateríaCadenas();
+        bateriaCadenas.Ejercicio1();
+        bateriaCadenas.Ejercicio2();
         bateriaCadenas.Ejercicio3();
-        //bateriaCadenas.Ejercicio4();
-        //bateriaCadenas.Ejercicio5();
+        bateriaCadenas.Ejercicio4();
+        bateriaCadenas.Ejercicio5();*/
+
+        NumeroSuerte numeroSuerte = new NumeroSuerte();
+        numeroSuerte.NumeroSuerte();
     }
 }
