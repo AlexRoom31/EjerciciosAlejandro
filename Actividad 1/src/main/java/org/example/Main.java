@@ -21,7 +21,10 @@ public class Main {
         bateriaCadenas.Ejercicio4();
         bateriaCadenas.Ejercicio5();*/
 
-        NumeroSuerte numeroSuerte = new NumeroSuerte();
-        numeroSuerte.NumeroSuerte();
+        /*NumeroSuerte numeroSuerte = new NumeroSuerte();
+        numeroSuerte.NumeroSuerte();*/
+
+        Calculadora calculadora = new Calculadora();
+        calculadora.Calculadora();
     }
 }
