@@ -24,7 +24,10 @@ public class Main {
         /*NumeroSuerte numeroSuerte = new NumeroSuerte();
         numeroSuerte.NumeroSuerte();*/
 
-        Calculadora calculadora = new Calculadora();
-        calculadora.Calculadora();
+        /*Calculadora calculadora = new Calculadora();
+        calculadora.Calculadora();*/
+
+        ComprobadorISBN comprobadorISBN = new ComprobadorISBN();
+        comprobadorISBN.ComprobadorISBN();
     }
 }
