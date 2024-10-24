@@ -23,6 +23,8 @@ public class ComprobadorISBN {
                     // Verificamos si el caracter es un dígito
                     if (Character.isDigit(caracter)) {
                         numero = Character.getNumericValue(caracter);
+                    } else if (caracter == 'X') {
+                        numero = 10;
                     } else {
                         System.out.println("Error: el ISBN no es válido");
                         esValido = false;
@@ -39,7 +41,8 @@ public class ComprobadorISBN {
                         System.out.println("ISBN válido");
                         error = false;
                     } else {
-                        System.out.println("ISBN inválido");
+                        System.out.println("El ISBN no es válido");
+                        break;
                     }
                 }
             } else {
