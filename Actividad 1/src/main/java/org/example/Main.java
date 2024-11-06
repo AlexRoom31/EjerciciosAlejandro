@@ -27,7 +27,10 @@ public class Main {
         /*Calculadora calculadora = new Calculadora();
         calculadora.Calculadora();*/
 
-        ComprobadorISBN comprobadorISBN = new ComprobadorISBN();
-        comprobadorISBN.ComprobadorISBN();
+        /*ComprobadorISBN comprobadorISBN = new ComprobadorISBN();
+        comprobadorISBN.ComprobadorISBN();*/
+
+        BateriaArrays bateriaArrays = new BateriaArrays();
+        bateriaArrays.Ejercicio5();
     }
 }
