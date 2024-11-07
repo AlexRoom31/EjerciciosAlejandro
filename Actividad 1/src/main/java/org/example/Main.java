@@ -30,7 +30,10 @@ public class Main {
         /*ComprobadorISBN comprobadorISBN = new ComprobadorISBN();
         comprobadorISBN.ComprobadorISBN();*/
 
-        BateriaArrays bateriaArrays = new BateriaArrays();
-        bateriaArrays.Ejercicio5();
+        /*BateriaArrays bateriaArrays = new BateriaArrays();
+        bateriaArrays.Ejercicio5();*/
+
+        Samurais samurais = new Samurais();
+        samurais.Combate();
     }
 }
