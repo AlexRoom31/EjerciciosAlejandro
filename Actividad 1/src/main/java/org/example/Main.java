@@ -33,7 +33,16 @@ public class Main {
         /*BateriaArrays bateriaArrays = new BateriaArrays();
         bateriaArrays.Ejercicio5();*/
 
-        Samurais samurais = new Samurais();
-        samurais.Combate();
+        /*Samurais samurais = new Samurais();
+        samurais.Combate();*/
+
+        /*Vectores vectores = new Vectores();
+        vectores.Vectores();*/
+
+        /*Ruleta ruleta = new Ruleta();
+        ruleta.Ruleta();*/
+
+        EliminarDuplicados eliminar = new EliminarDuplicados();
+        eliminar.Eliminar();
     }
 }
