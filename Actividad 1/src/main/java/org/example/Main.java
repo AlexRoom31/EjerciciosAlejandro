@@ -42,7 +42,13 @@ public class Main {
         /*Ruleta ruleta = new Ruleta();
         ruleta.Ruleta();*/
 
-        EliminarDuplicados eliminar = new EliminarDuplicados();
-        eliminar.Eliminar();
+        /*EliminarDuplicados eliminar = new EliminarDuplicados();
+        eliminar.Eliminar();*/
+
+        /*Matrices matrices = new Matrices();
+        matrices.Ejercicio3();*/
+
+        SopaDeLetras sopaDeLetras = new SopaDeLetras();
+        sopaDeLetras.SopaDeLetras();
     }
 }
