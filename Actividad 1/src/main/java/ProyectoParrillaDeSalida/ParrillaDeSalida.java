@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class ParrillaDeSalida {
     public static void parrilaDeSalida(){
-        final int MAXIMO_PILOTOS = 26;
+        final int MAXIMO_PILOTOS = 26; // Numero maximo de pilotos que participaran en una carrera
+        final int NUM_DATOS_PILOTOS = 2; // El numero de campos que tiene la matriz para guardar los datos introducidos por el usuario
 
         int numeroPilotos;
 
@@ -15,6 +16,7 @@ public class ParrillaDeSalida {
         numeroPilotos = pedirNumeroPilotos(MAXIMO_PILOTOS);
         System.out.println("Vamos a ingresar los resultados de la carrera con el nombre del piloto en orden de llegada y el numero de posiciones que a subido respecto a la parrilla de salida.");
         String[][] pilotos = pedirPilotos(numeroPilotos,MAXIMO_PILOTOS);
+        reconstruirParrila(pilotos,MAXIMO_PILOTOS,numeroPilotos,NUM_DATOS_PILOTOS);
 
 
     }
@@ -80,7 +82,34 @@ public class ParrillaDeSalida {
         return pilotos;
     }
 
-    public static void reconstruirParrila(String[][] pilotos){
+    public static void reconstruirParrila(String[][] pilotos,int numero_participantes,int numero_pilotos,int campos){
+        String [][] parrilla = new String[numero_pilotos][campos];
+        int posicion = 0;
+        int posAdelantadas = 0;
+
+        for(int pos_piloto = 0; pos_piloto < numero_pilotos; pos_piloto++){
+            posAdelantadas = Integer.parseInt(pilotos[pos_piloto][1]);
+            posicion = pos_piloto+posAdelantadas;
+            parrilla[pos_piloto][0] = pilotos[pos_piloto][0];
+            parrilla[pos_piloto][1] = Integer.toString(posicion);
+        }
+        for (int piloto = 0; piloto < numero_participantes; piloto++){
+            if (piloto < numero_pilotos){
+                posicion = Integer.parseInt(parrilla[piloto][1]);
+
+                if (posicion == piloto+1){
+                    System.out.println(posicion +"º "+parrilla[piloto][0]);
+                }
+                else{
+                    System.out.println((piloto+1)+"º - ABANDONO -");
+                }
+            }else {
+                System.out.println((piloto+1)+"º - ABANDONO -");
+            }
+
+
+        }
+
 
     }
 
