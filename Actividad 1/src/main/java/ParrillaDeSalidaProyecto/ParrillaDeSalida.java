@@ -5,23 +5,25 @@ import java.util.Scanner;
 public class ParrillaDeSalida {
     public static void parrilaDeSalida(){
         final int MAXIMO_PILOTOS = 26; // Numero maximo de pilotos que participaran en una carrera
-        final int NUM_DATOS_PILOTOS = 2; // El numero de campos que tiene la matriz para guardar los datos introducidos por el usuario
 
         int numeroPilotos;
 
-        textoParrilla();
+        textoParrilla(); // Mostrar un texto
         System.out.println("Escriba el numero de pilotos que han terminado la carrera: ");
-        numeroPilotos = pedirNumeroPilotos(MAXIMO_PILOTOS);
+        numeroPilotos = pedirNumeroPilotos(MAXIMO_PILOTOS); // Pide la cantidad de pilotos que han terminado la carrera
         System.out.println("Vamos a ingresar los resultados de la carrera con el nombre del piloto en orden de llegada y el numero de posiciones que a subido respecto a la parrilla de salida.");
-        String[][] pilotos = pedirPilotos(numeroPilotos,MAXIMO_PILOTOS);
-        textoParrilla();
-        reconstruirParrila(pilotos,numeroPilotos,MAXIMO_PILOTOS);
+        String[][] pilotos = pedirPilotos(numeroPilotos,MAXIMO_PILOTOS); // Con la cantidad de pilotos que han terminado
+                                                                        // la carrera pide cada piloto en orden de llegada y
+                                                                        //el numero de diferencia de posiciones respecto a la salida
+        textoParrilla(); // Mostrar un texto
+        reconstruirParrila(pilotos,numeroPilotos,MAXIMO_PILOTOS); // Reconstruye la parrilla de salida y la ordena y la muestra
     }
     public static void textoParrilla(){
         System.out.println("PARRILLA DE SALIDA");
         System.out.println("---------------------------------------");
     }
 
+    // Pedir numero de pilotos que han terminado la carrera
     public static int pedirNumeroPilotos(int maximoPilotos) {
         Scanner sc = new Scanner(System.in);
         int numero = -1;
@@ -48,10 +50,12 @@ public class ParrillaDeSalida {
         return numero;
     }
 
+    // Verifica si un numero esta entre el minimo y el maximo esperado
     public static boolean verificarRango(int numero, int minimo, int maximo) {
         return numero >= minimo && numero <= maximo;
     }
 
+    // Funcion para pedir los pilotos y las posiciones que ha adelantado o perdido verificando que el valor introducido sea correcto
     public static String[][] pedirPilotos(int numeroPilotos,int maximoPilotos) {
         Scanner sc = new Scanner(System.in);
         String[][] pilotos = new String[2][numeroPilotos]; // Matriz 2xN: [0] para nombres, [1] para posiciones
@@ -83,6 +87,7 @@ public class ParrillaDeSalida {
         return pilotos;
     }
 
+    // Reconstruye la parrilla teniendo la matriz de los pilotos y las posiciones que han adelantado y perdido
     public static void reconstruirParrila(String[][] pilotos,int numero_pilotos,int numero_participantes){
         String[][] parrillaSalida = new String[2][numero_pilotos];
         String[][] parrillaSalidaOrdenada = new String [2][numero_pilotos];
@@ -101,6 +106,7 @@ public class ParrillaDeSalida {
         mostrarParrilla(parrillaSalidaOrdenada,parrillaSalida,numero_participantes,numero_pilotos);
     }
 
+    // Muestra la parrilla de salida ya ordenada
     public static void mostrarParrilla(String[][] parrillaOrdenada,String[][] parrillaSinOrdenar,int participantes,int numero_pilotos){
         int contador = 0;
         int posicion = 0;
@@ -123,6 +129,7 @@ public class ParrillaDeSalida {
 
     }
 
+    // Ordena la parrilla para que este en orden
     public static String[][] ordenarParrilla(String[][] parrillaSinOrdenar, int num_pilotos) {
         // Ordenar las posiciones (segunda fila) junto con los nombres (primera fila)
         // Usamos un comparador simple para ordenar en base a las posiciones (parrillaSinOrdenar[1])
@@ -144,7 +151,6 @@ public class ParrillaDeSalida {
                 }
             }
         }
-
         // Ahora que está ordenada la parrilla por posiciones, devolvemos el resultado
         for (int i = 0; i < num_pilotos; i++) {
             parrillaOrdenada[0][i] = parrillaSinOrdenar[0][i]; // Nombres de los pilotos
