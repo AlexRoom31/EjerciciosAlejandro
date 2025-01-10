@@ -16,4 +16,12 @@ public class EjerciciosRecursividad {
         System.out.println("6 - Orden alfabetico");
         System.out.println("7 - Mostrar suma");
     }
+
+    public static int Potencias(int base, int expo){
+        if (expo == 0){
+            return 1;
+        } else {
+            return base * Potencias(base,--expo);
+        }
+    }
 }
